@@ -1,0 +1,16 @@
+<form action="/error05">
+    <div>
+        <h1>Hi <%= name%>
+        </h1>
+    </div>
+    <div>
+        <p>I'm sorry, but you already have the game page open. Close it or log out</p>
+    </div>
+</form>
+
+<form action="/profile">
+    <button id="btnProfile">Profile</button>
+</form>
+<form action="/logout?_method=DELETE" method="POST">
+    <button type="submit">Log Out</button>
+</form>

@@ -1,0 +1,40 @@
+<style>
+    * {
+        margin: 0;
+    }
+
+    body {
+        background-color: rgb(139, 247, 247);
+    }
+
+    #Log-out {
+        background-color: rosybrown;
+        margin-top: 50px;
+    }
+</style>
+
+<form action="/profile">
+    <div>
+        <h1 id="name">
+            <%= name%>
+        </h1>
+    </div>
+</form>
+
+<form id="town">
+    <button id="btnPlay">Play</button>
+</form>
+
+<form action="/logout?_method=DELETE" method="POST">
+    <button type="submit" id="Log-out">Log Out</button>
+</form>
+
+<script>
+    const form_town = document.getElementById("town");
+    const btnPlay = document.getElementById("btnPlay")
+
+    btnPlay.onclick = function (event) {
+        event.preventDefault();
+        location.pathname = "/town";
+    }
+</script>

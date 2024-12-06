@@ -1,0 +1,42 @@
+<h1 id="user-name">
+    <%= name%>
+</h1>
+
+<h1 id="user-email">
+    <%= email%>
+</h1>
+
+<!-- Publisher placeholder -->
+<div id="publisher"></div>
+
+<!-- Subscriber -->
+<div id="subscriber"></div>
+
+<div id="gameDiv" style="display: block;">
+    <div id="game" class="line"></div>
+
+
+    <div id="chating" class="line" style="margin-bottom: 20px; display: none;">
+        <div id="global-chat" style="width: 300px; height: 400px; overflow-y: scroll;">
+            <div>Global chat</div>
+        </div>
+        <form id="chat-form">
+            <input type="text" id="chat-input" style="width: 270px">
+        </form>
+        <button id="chat-switch">Click on me</button>
+    </div>
+
+</div>
+
+<script src="https://static.opentok.com/v2/js/opentok.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/phaser@3.20.1/dist/phaser.min.js"></script>
+<script src="./lib/phaser.js"></script>
+<script type="module" src="./src/game.js"></script>
+
+<form action="/profile">
+    <button id="btnProfile">Profile</button>
+</form>
+<form action="/logout?_method=DELETE" method="POST">
+    <button type="submit">Log Out</button>
+</form>
